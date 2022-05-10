@@ -1,4 +1,5 @@
 ﻿using static System.Console;
+using System.Linq;
 
 namespace Lab_3_2;
 
@@ -11,6 +12,7 @@ public class VacationWorker
             rec[i] = new Vacation();
         return rec;
     }
+
     public static Vacation[] GetVacations(int days, string transport, bool meals)
     {
         Vacation[] rec = new Vacation[5];
@@ -18,6 +20,7 @@ public class VacationWorker
             rec[i] = new Vacation(transport, days, meals);
         return rec;
     }
+
     public static void ChooseVacation(Vacation[] rec, int i)
     {
         if (i == 0) return;
@@ -51,5 +54,10 @@ public class VacationWorker
             WriteLine($"{i + 1}. {rec[i]}");
             WriteLine();
         }
+    }
+
+    public static Vacation[] VacationSorting(Vacation[] vac)
+    {
+        return vac.OrderByDescending(x => x.Rating.Length).ToArray();
     }
 }

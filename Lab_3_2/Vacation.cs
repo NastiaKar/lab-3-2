@@ -5,9 +5,13 @@ namespace Lab_3_2;
 
 public class Vacation
 {
-    public static readonly string[] CountriesChoice = new string[] { "USA", "Canada", "Germany", "Ukraine", "France", "Italy"};
-    public static readonly string[] VacationTypes = new string[] { "Relaxation", "Tour", "Health Treatment", "Shopping", "Cruise" };
-    public static readonly string[] TransportTypes = new string[] { "Train", "Bus", "Plane", "Ship" };
+    public static readonly string[] CountriesChoice = new string[]
+        {"USA", "Canada", "Germany", "Ukraine", "France", "Italy"};
+
+    public static readonly string[] VacationTypes = new string[]
+        {"Relaxation", "Tour", "Health Treatment", "Shopping", "Cruise"};
+
+    public static readonly string[] TransportTypes = new string[] {"Train", "Bus", "Plane", "Ship"};
     public bool MealsAvailable = false;
     private int _numberOfDays;
     private Random rand = new Random();
@@ -15,6 +19,8 @@ public class Vacation
     public string Country { get; set; }
     public string VacationType { get; set; }
     public string Transport { get; set; }
+    public string Rating { get; set; }
+
     public int NumberOfDays
     {
         set
@@ -32,7 +38,9 @@ public class Vacation
         Transport = TransportTypes[rand.Next(TransportTypes.Length)];
         NumberOfDays = rand.Next(5, 22);
         MealsAvailable = rand.Next(2) == 1;
+        Rating = new string('☺', rand.Next(3, 6));
     }
+
     public Vacation(string transport, int numberOfDays, bool mealsAvailable)
     {
         Country = CountriesChoice[rand.Next(CountriesChoice.Length)];
@@ -40,10 +48,12 @@ public class Vacation
         Transport = transport;
         NumberOfDays = numberOfDays;
         MealsAvailable = mealsAvailable;
+        Rating = new string('☺', rand.Next(3, 6));
     }
+
     public override string ToString()
     {
         return $"Country: {Country}\nType: {VacationType}\nTransport: {Transport}\nNumber of days: {NumberOfDays}\n" +
-               $"Meals: {MealsAvailable}";
+               $"Meals: {MealsAvailable}\nRating: {Rating}";
     }
 }
