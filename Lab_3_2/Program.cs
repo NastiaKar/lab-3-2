@@ -6,15 +6,20 @@ namespace Lab_3_2
     {
         static void Main(string[] args)
         {
-            Vacation[] rec = Vacation.GetVacations();
-            for (int i = 0; i < rec.Length; i++)
-            {
-                WriteLine($"{i + 1}. {rec[i]}");
-                WriteLine();
-            }
+            Vacation[] rec = VacationWorker.GetVacations();
+            VacationWorker.PrintVacations(rec);
             WriteLine("Choose preferred tour or type 0 to search for new recommendations...");
             int choice = Convert.ToInt32(ReadLine());
-            Vacation.ChooseVacation(rec, choice);
+            while (choice == 0)
+            {
+                Vacation[] rec2 = VacationWorker.VacationParameters();
+                VacationWorker.PrintVacations(rec2);
+                WriteLine("CHOOSE: ");
+                choice = Convert.ToInt32(ReadLine());
+                VacationWorker.ChooseVacation(rec2, choice);
+            }
+            VacationWorker.ChooseVacation(rec, choice);
+            
             ReadKey();
         }
     }

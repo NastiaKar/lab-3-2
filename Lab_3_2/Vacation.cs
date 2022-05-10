@@ -5,10 +5,10 @@ namespace Lab_3_2;
 
 public class Vacation
 {
+    public static readonly string[] CountriesChoice = new string[] { "USA", "Canada", "Germany", "Ukraine", "France", "Italy"};
+    public static readonly string[] VacationTypes = new string[] { "Relaxation", "Tour", "Health Treatment", "Shopping", "Cruise" };
+    public static readonly string[] TransportTypes = new string[] { "Train", "Bus", "Plane", "Ship" };
     public bool MealsAvailable = false;
-    private readonly string[] _countriesChoice = new string[] { "USA", "Canada", "Germany", "Ukraine", "France", "Italy"};
-    private readonly string[] _vacationType = new string[] { "Relaxation", "Tour", "Health Treatment", "Shopping", "Cruise" };
-    private readonly string[] _transportType = new string[] { "Train", "Bus", "Plane", "Ship" };
     private int _numberOfDays;
     private Random rand = new Random();
 
@@ -27,26 +27,19 @@ public class Vacation
 
     public Vacation()
     {
-        Country = _countriesChoice[rand.Next(_countriesChoice.Length)];
-        VacationType = _vacationType[rand.Next(_vacationType.Length)];
-        Transport = _transportType[rand.Next(_transportType.Length)];
+        Country = CountriesChoice[rand.Next(CountriesChoice.Length)];
+        VacationType = VacationTypes[rand.Next(VacationTypes.Length)];
+        Transport = TransportTypes[rand.Next(TransportTypes.Length)];
         NumberOfDays = rand.Next(5, 22);
         MealsAvailable = rand.Next(2) == 1;
     }
-    public static Vacation[] GetVacations()
+    public Vacation(string transport, int numberOfDays, bool mealsAvailable)
     {
-        Vacation[] rec = new Vacation[5];
-        for (int i = 0; i < rec.Length; i++)
-            rec[i] = new Vacation();
-        return rec;
-    }
-    public static void ChooseVacation(Vacation[] rec, int i)
-    {
-        Clear();
-        ForegroundColor = ConsoleColor.Yellow;
-        WriteLine("Your vacation: ");
-        WriteLine(rec[i - 1]);
-        ResetColor();
+        Country = CountriesChoice[rand.Next(CountriesChoice.Length)];
+        VacationType = VacationTypes[rand.Next(VacationTypes.Length)];
+        Transport = transport;
+        NumberOfDays = numberOfDays;
+        MealsAvailable = mealsAvailable;
     }
     public override string ToString()
     {
