@@ -7,7 +7,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80b3a733-55c7-4d85-8e9c-ef940f28237c" name="Changes" comment="" />
+    <list default="true" id="80b3a733-55c7-4d85-8e9c-ef940f28237c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lab_3_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lab_3_2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab_3_2/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_3_2/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab_3_2/Vacation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_3_2/Vacation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab_3_2/bin/Debug/net6.0/Lab_3_2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_3_2/bin/Debug/net6.0/Lab_3_2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab_3_2/bin/Debug/net6.0/Lab_3_2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_3_2/bin/Debug/net6.0/Lab_3_2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab_3_2/obj/Debug/net6.0/Lab_3_2.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_3_2/obj/Debug/net6.0/Lab_3_2.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab_3_2/obj/Debug/net6.0/Lab_3_2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_3_2/obj/Debug/net6.0/Lab_3_2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab_3_2/obj/Debug/net6.0/Lab_3_2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_3_2/obj/Debug/net6.0/Lab_3_2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab_3_2/obj/Debug/net6.0/ref/Lab_3_2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_3_2/obj/Debug/net6.0/ref/Lab_3_2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lab_3_2/obj/Debug/net6.0/refint/Lab_3_2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Lab_3_2/obj/Debug/net6.0/refint/Lab_3_2.dll" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +28,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="28eNgLYoDFvvDVNnrJOUGXPh7BL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -68,12 +80,15 @@
       <workItem from="1652107849277" duration="2297000" />
       <workItem from="1652112714545" duration="2186000" />
       <workItem from="1652172730403" duration="886000" />
+      <workItem from="1652191680186" duration="837000" />
+      <workItem from="1652202167735" duration="1445000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

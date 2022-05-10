@@ -5,9 +5,6 @@ namespace Lab_3_2;
 
 public class Vacation
 {
-    public string Country = "";
-    public string VacationType = "";
-    public string Transport = "";
     public bool MealsAvailable = false;
     private readonly string[] _countriesChoice = new string[] { "USA", "Canada", "Germany", "Ukraine", "France", "Italy"};
     private readonly string[] _vacationType = new string[] { "Relaxation", "Tour", "Health Treatment", "Shopping", "Cruise" };
@@ -15,6 +12,9 @@ public class Vacation
     private int _numberOfDays;
     private Random rand = new Random();
 
+    public string Country { get; set; }
+    public string VacationType { get; set; }
+    public string Transport { get; set; }
     public int NumberOfDays
     {
         set
@@ -33,12 +33,24 @@ public class Vacation
         NumberOfDays = rand.Next(5, 22);
         MealsAvailable = rand.Next(2) == 1;
     }
-
+    public static Vacation[] GetVacations()
+    {
+        Vacation[] rec = new Vacation[5];
+        for (int i = 0; i < rec.Length; i++)
+            rec[i] = new Vacation();
+        return rec;
+    }
+    public static void ChooseVacation(Vacation[] rec, int i)
+    {
+        Clear();
+        ForegroundColor = ConsoleColor.Yellow;
+        WriteLine("Your vacation: ");
+        WriteLine(rec[i - 1]);
+        ResetColor();
+    }
     public override string ToString()
     {
         return $"Country: {Country}\nType: {VacationType}\nTransport: {Transport}\nNumber of days: {NumberOfDays}\n" +
                $"Meals: {MealsAvailable}";
     }
-    
-    
 }
