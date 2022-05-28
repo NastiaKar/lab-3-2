@@ -1,5 +1,4 @@
 ﻿using static System.Console;
-using System.Linq;
 
 namespace Lab_3_2;
 
